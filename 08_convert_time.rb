@@ -3,7 +3,13 @@
 # Hint: Methods to use: %
 
 def convert_time(minutes)
-
+  hours = minutes/60
+  minute = minutes%60
+  tables=[ [hours], [minute]]
+  if minute<10
+    return tables.join(':0')
+  end
+  return tables.join(':'
 end
 
 p convert_time(15)=="0:15"
