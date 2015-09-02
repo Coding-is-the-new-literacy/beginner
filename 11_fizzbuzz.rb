@@ -9,6 +9,24 @@
 # All the other integers remain unchanged.
 
 def fizzbuzz(input_array)
+  result = []
+  input_array.each {
+      |x| x
+    if x % 3 == 0 and x % 5 == 0
+      # Checks if integer is divisible by both 3 & 5
+      result << "fizzbuzz"
+    elsif x % 3 == 0
+      # Checks if integer is divisible by only 3
+      result << "fizz"
+    elsif x % 5 == 0
+      # Checks if integer is divisible by only 5
+      result << "buzz"
+    else
+      # Otherwise prints the number itself
+      result << x
+    end
+  }
+  return result
 end
 
 p fizzbuzz([1,2,3,4,5,6]) == [1, 2, "fizz", 4, "buzz", "fizz"]
