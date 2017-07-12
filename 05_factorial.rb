@@ -4,7 +4,12 @@
 
 # BONUS: implement factorial recursively :)
 
-def factorial(n)
+def factorial(n):
+    if(n==1)
+        1
+    else
+      n*factorial(n-1)
+   end
 end
 
 p factorial(0)==1
